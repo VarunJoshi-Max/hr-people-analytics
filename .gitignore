@@ -18,3 +18,11 @@ venv/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Local inspection report may contain employee information
+reports/data_inspection.txt
+
+# Local reports that may contain sensitive employee information
+reports/data_inspection.txt
+profile_all_data.txt
+scripts/profile_all_data.txt
