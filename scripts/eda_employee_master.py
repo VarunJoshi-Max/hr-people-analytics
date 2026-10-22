@@ -77,6 +77,29 @@ def plot_employee_count_by_department(df, output_dir):
 
     print(f"Employee count chart saved to: {output_file}")
 
+    
+def plot_employee_status(df, output_dir):
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    status_counts = df["Status"].value_counts()
+
+    plt.figure(figsize=(8, 6))
+    plt.pie(
+        status_counts,
+        labels=status_counts.index,
+        autopct="%1.1f%%",
+        startangle=90
+    )
+
+    plt.title("Employee Status Distribution")
+    plt.tight_layout()
+
+    output_file = output_dir / "employee_status_distribution.png"
+    plt.savefig(output_file, dpi=150)
+    plt.close()
+
+    print(f"Employee status chart saved to: {output_file}")
+
 def main():
     df = pd.read_csv(DATA_FILE)
 
@@ -126,6 +149,7 @@ def main():
     plot_salary_distribution(df, output_dir)
     plot_average_salary_by_department(df, output_dir)
     plot_employee_count_by_department(df, output_dir)
+    plot_employee_status(df, output_dir)
 
 if __name__ == "__main__":
     main()
