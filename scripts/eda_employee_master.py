@@ -100,6 +100,32 @@ def plot_employee_status(df, output_dir):
 
     print(f"Employee status chart saved to: {output_file}")
 
+
+def plot_performance_rating(df, output_dir):
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    rating_counts = (
+        df["PerformanceRating"]
+        .dropna()
+        .value_counts()
+        .sort_index()
+    )
+
+    plt.figure(figsize=(8, 6))
+    rating_counts.plot(kind="bar", edgecolor="black")
+
+    plt.title("Employee Performance Rating Distribution")
+    plt.xlabel("Performance Rating")
+    plt.ylabel("Number of Employees")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+
+    output_file = output_dir / "performance_rating_distribution.png"
+    plt.savefig(output_file, dpi=150)
+    plt.close()
+
+    print(f"Performance rating chart saved to: {output_file}")
+
 def main():
     df = pd.read_csv(DATA_FILE)
 
@@ -150,6 +176,7 @@ def main():
     plot_average_salary_by_department(df, output_dir)
     plot_employee_count_by_department(df, output_dir)
     plot_employee_status(df, output_dir)
+    plot_performance_rating(df, output_dir)
 
 if __name__ == "__main__":
     main()
