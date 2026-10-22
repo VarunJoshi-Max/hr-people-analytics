@@ -54,6 +54,29 @@ def plot_average_salary_by_department(df, output_dir):
     print(f"Department salary chart saved to: {output_file}")
 
 
+def plot_employee_count_by_department(df, output_dir):
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    employee_count = (
+        df.groupby("Department")["EmployeeID"]
+        .nunique()
+        .sort_values()
+    )
+
+    plt.figure(figsize=(10, 6))
+    employee_count.plot(kind="barh", edgecolor="black")
+
+    plt.title("Employee Count by Department")
+    plt.xlabel("Number of Employees")
+    plt.ylabel("Department")
+    plt.tight_layout()
+
+    output_file = output_dir / "employee_count_by_department.png"
+    plt.savefig(output_file, dpi=150)
+    plt.close()
+
+    print(f"Employee count chart saved to: {output_file}")
+
 def main():
     df = pd.read_csv(DATA_FILE)
 
@@ -102,6 +125,7 @@ def main():
     output_dir = PROJECT_DIR / "reports" / "charts"
     plot_salary_distribution(df, output_dir)
     plot_average_salary_by_department(df, output_dir)
+    plot_employee_count_by_department(df, output_dir)
 
 if __name__ == "__main__":
     main()
