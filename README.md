@@ -10,7 +10,21 @@ Python was used for data processing, Power BI for dashboard development and anal
 
 The objective is to transform HR data into meaningful insights that help stakeholders understand workforce patterns and identify areas requiring further investigation.
 
-## 2. Business Objectives
+## 2. Problem Statement
+
+Organizations need reliable insights into their workforce to make informed human resource decisions. However, analyzing employee data across multiple HR functions can make it difficult to identify patterns, evaluate performance, and understand workforce requirements.
+
+This project addresses the following business problems:
+
+- **Workforce Distribution:** How are employees distributed across departments, and what does the workforce composition look like?
+- **Employee Attrition:** What patterns can be observed in employee terminations across different departments and employee groups?
+- **Compensation Analysis:** How does average recorded salary vary across departments?
+- **Performance Analysis:** How do employee performance scores differ across departments?
+- **Employee Engagement & Training:** What patterns exist in employee engagement scores and training outcomes?
+- **Recruitment & Workforce Planning:** How are open positions and succession planning records distributed across departments?
+- **Data-Driven Decision-Making:** How can HR metrics be consolidated into an interactive dashboard to help stakeholders explore workforce trends and identify areas for further investigation?
+
+## 3. Business Objectives
 
 - Analyze workforce composition and employee status.
 - Examine headcount trends, hires, terminations, and monthly attrition.
@@ -21,7 +35,7 @@ The objective is to transform HR data into meaningful insights that help stakeho
 - Examine employee participation in succession planning.
 - Present HR metrics through interactive dashboards to support data-driven decision-making.
 
-## 3. Dashboard Pages
+## 4. Dashboard Pages
 
 The Power BI report contains five pages.
 
@@ -88,7 +102,7 @@ Examines recruitment requirements and succession planning.
 
 **Purpose:** Help stakeholders understand recruitment demand and review succession planning coverage.
 
-## 4. Key Findings
+## 5. Key Findings
 
 The following findings are based on the metrics displayed in the dashboard.
 
@@ -117,7 +131,7 @@ The following findings are based on the metrics displayed in the dashboard.
 
 **Interpretation note:** The 14.1% figure represents terminated employees as a proportion of all employee records. It should not be interpreted as the monthly or annual attrition rate.
 
-## 5. Business Recommendations
+## 6. Business Recommendations
 
 ### 1. Improve Workforce Planning
 
@@ -139,14 +153,14 @@ Review training assessment scores and connect training participation with releva
 
 Review open positions alongside succession plans to identify critical roles and potential internal talent pipelines. Validate succession coverage and employee readiness before making workforce planning decisions.
 
-## 6. Tools & Technologies
+## 7. Tools & Technologies
 
 - **Python:** Data processing and preparation.
 - **Microsoft Power BI Desktop:** Data visualization, dashboard development, and reporting.
 - **Git:** Version control and tracking project changes.
 - **GitHub:** Repository hosting and project documentation.
 
-## 7. Data Model
+## 8. Data Model
 
 The project uses dimension and fact tables to organize HR information for analysis.
 
@@ -176,7 +190,7 @@ The project uses dimension and fact tables to organize HR information for analys
 
 The development model also contained a `fact_EmployeeStatus` table with loading disabled.
 
-## 8. Key HR Metrics
+## 9. Key HR Metrics
 
 The dashboard includes metrics covering the following areas:
 
@@ -197,7 +211,7 @@ The dashboard includes metrics covering the following areas:
 
 These metrics enable users to explore HR indicators and compare departments or time periods where the underlying data and report filters support those comparisons.
 
-## 9. Limitations and Considerations
+## 10. Limitations and Considerations
 
 - The 14.1% terminated employee share is based on employee records and is not a period-based attrition rate.
 - Average recorded salary may not represent current payroll unless the underlying records and calculation have been validated for that purpose.
@@ -206,7 +220,7 @@ These metrics enable users to explore HR indicators and compare departments or t
 - Observed differences between departments do not establish cause and effect.
 - Recruitment and succession planning metrics should be validated against actual business requirements before operational decisions are made.
 
-## 10. Conclusion
+## 11. Conclusion
 
 The HR & People Analytics Dashboard demonstrates the use of Power BI to bring multiple HR data areas into a unified reporting environment.
 
@@ -217,7 +231,7 @@ The dashboard demonstrates practical application of data processing, data visual
 It also highlights how HR analytics can help stakeholders identify patterns, investigate potential issues, and make more informed workforce planning decisions.
 
 
-## 11. Author
+## 12. Author
 
 **Varun Joshi**  
 MBA in Finance | HR & People Analytics | Power BI
