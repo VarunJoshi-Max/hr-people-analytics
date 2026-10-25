@@ -216,27 +216,8 @@ The dashboard demonstrates practical application of data processing, data visual
 
 It also highlights how HR analytics can help stakeholders identify patterns, investigate potential issues, and make more informed workforce planning decisions.
 
-## 11. Repository Structure
 
-The repository is intended to contain the Power BI report, dashboard screenshots, and project documentation.
-
-```text
-hr-people-analytics/
-├── powerbi/
-│   └── HR_People_Analytics.pbix
-├── screenshots/
-│   ├── 01_HR_Executive_Overview.png
-│   ├── 02_Workforce_Attrition.png
-│   ├── 03_Compensation_Performance.png
-│   ├── 04_Engagement_Training.png
-│   └── 05_Recruitment_Planning.png
-├── README.md
-└── Business_Insights.md
-```
-
-*Update the structure and filenames to match the files actually present in the GitHub repository. Do not upload confidential or sensitive employee information.*
-
-## 12. Author
+## 11. Author
 
 **Varun Joshi**  
 MBA in Finance | HR & People Analytics | Power BI
